@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Кто стоит в очереди?</h1>
+{% set a = 'Каюта №' %}
+{% for user in data %}
+<h5>{{ user }} - {{a}} {{ loop.index }} {% if loop.first %} - капитан корабля{% endif %}</h5>
+{% endfor %}
+{% endblock %}
